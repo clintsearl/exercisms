@@ -21,20 +21,20 @@ describe('Transcriptor', () => {
     expect(toRna('T')).toEqual('A');
   });
 
-  xtest('transcribes all dna nucleotides to their rna complements', () => {
+  test('transcribes all dna nucleotides to their rna complements', () => {
     expect(toRna('ACGTGGTCTTAA'))
       .toEqual('UGCACCAGAAUU');
   });
 
-  xtest('correctly handles invalid input', () => {
+  test('correctly handles invalid input', () => {
     expect(() => toRna('U')).toThrow(new Error('Invalid input DNA.'));
   });
 
-  xtest('correctly handles completely invalid input', () => {
+  test('correctly handles completely invalid input', () => {
     expect(() => toRna('XXX')).toThrow(new Error('Invalid input DNA.'));
   });
 
-  xtest('correctly handles partially invalid input', () => {
+  test('correctly handles partially invalid input', () => {
     expect(() => toRna('ACGTXXXCTTAA')).toThrow(new Error('Invalid input DNA.'));
   });
 });
