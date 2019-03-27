@@ -16,7 +16,7 @@ export const hey = (message) => {
  let tmessage = message.trim()
     if(tmessage.endsWith('?')){
       if (tmessage === tmessage.toUpperCase()){
-        return 'Sure.'
+        return 'Calm down, I know what I\'m doing!'
       }
       return 'Sure.'
     }
