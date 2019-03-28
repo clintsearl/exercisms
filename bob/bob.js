@@ -15,21 +15,18 @@
 export const hey = (message) => {
  let tmessage = message.trim()
     if(tmessage.endsWith('?')){
-      if (tmessage === tmessage.toUpperCase()){
+      if (tmessage === tmessage.toUpperCase() && tmessage.match(/[a-z]/i)){
         return 'Calm down, I know what I\'m doing!'
       }
       return 'Sure.'
     }
-    else if(tmessage.endsWith('!')){
-      return 'Whoa, chill out!'
-    }
-    else if(tmessage.endsWith('!') && tmessage !== tmessage.toUpperCase()){
-      return 'Calm down, I know what I\'m doing!'
+      else if(tmessage.endsWith('!') && tmessage === tmessage.toUpperCase()){
+        return 'Whoa, chill out!'
     }
     else if(tmessage === ''){
       return 'Fine. Be that way!'
     }
-    else if(tmessage === tmessage.toUpperCase())
+    else if(tmessage === tmessage.toUpperCase() && tmessage.match(/[a-z]/i))
       return 'Whoa, chill out!'
     else{
       return 'Whatever.'
