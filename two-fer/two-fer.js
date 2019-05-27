@@ -1,12 +1,13 @@
-import { type } from "os";
 
-export const twoFer = (name) =>{
+export const twoFer = (name = "you") =>{  
+    return `One for ${name}, one for me.`   
+} 
 
-    if (name === undefined) { 
-      name = "you"
-    }
-    // (typeof(name) === undefined ? 'you' :name)
-    return `One for ${name}, one for me.`
 
-    
-}
+
+// if (name === undefined) { 
+    //   name = "you"
+    // }
+
+
+ 
